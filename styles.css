@@ -1,0 +1,83 @@
+body {
+   margin: 0 auto;
+   padding: 0;
+   width: 8.1in;
+   /* width: 8.3in; */
+}
+
+#input_recipient,
+#input_amount_speech {
+   width: 6in;
+}
+
+#input_print {
+   padding: 1.5mm 3.5mm;
+}
+
+#cheque {
+   margin-left: 0.3in;
+   margin-top: 2.5mm;
+
+   font-family: "Times New Roman", Sans-serif;
+   width: 7.5in;
+   height: 3.5in;
+   background: white;
+   position: relative;
+   background-image: url("assets/cheque.png");
+   background-size: cover;
+}
+
+#cheque #date,
+#amount_number,
+#amount_speech,
+#recipient,
+img {
+   position: absolute;
+}
+
+#cheque #date {
+   top: 16mm;
+   left: 135mm;
+   font-size: 1.3rem;
+   letter-spacing: 4mm;
+}
+
+#cheque #amount_number {
+   top: 40mm;
+   left: 5.5in;
+   font-size: 2rem;
+}
+
+#cheque #recipient {
+   top: 31mm;
+   left: 1.3in;
+   font-size: 1.3rem;
+}
+
+#cheque #amount_speech {
+   /* top: 40mm; */
+   top: 38mm;
+   font-size: 1.3rem;
+   /* left: 1.3in; */
+   left: 0.3in;
+   line-height: 9mm;
+   text-indent: 1in;
+   width: 4.5in;
+}
+
+#cheque img {
+   height: 0.5cm;
+   top: 9mm;
+   left: -2mm;
+   transform: rotate(-50deg);
+   display: none;
+}
+
+@media print {
+   #cheque {
+      transform: rotate(-90deg) translate(-26%);
+   }
+   form {
+      display: none;
+   }
+}
